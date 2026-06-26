@@ -14,9 +14,6 @@ def visualizar_cabecalho():
 
 def visualizar_dados():
   N = int(input("Digite quantos passageiros você quer ver do arquivo")
-          
-    C = 1
-    while C <= N:
-      
-      
-      C += 1
+
+    for i in range(N):
+          print(dados[i])
