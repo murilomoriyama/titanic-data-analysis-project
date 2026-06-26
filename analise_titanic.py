@@ -43,7 +43,11 @@ def estatisticas():
     print(tarifaminima)
     print(tarifamaxima)
     print(tarifamedia)
-        
+
+
+# Fazendo o 7
+
+
   
 
 
