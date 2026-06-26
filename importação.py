@@ -1,7 +1,7 @@
 import os
 import csv
 
-def carregar_dados(caminho_arquivo="train.csv"):
+def carregar_dados(caminho_arquivo = "train.csv"):
 
   if not os.path.exists(caminho_arquivo):
     print("Arquivo não encontrado.")
@@ -10,7 +10,7 @@ def carregar_dados(caminho_arquivo="train.csv"):
     with open("train.csv", "r") as f:
       conteudo = csv.reader(f)
 
-      cabeçalho = next(conteudo)
+      cabeçalho = [next(conteudo)]
       matriz_dados = list(conteudo)
       return cabeçalho, matriz_dados
   except Exception as erro:
