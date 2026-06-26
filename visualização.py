@@ -7,9 +7,19 @@ Listar todos os dados de forma organizada.
 
 from importação import carregar_dados
 
-cabecalho = carregar_dados
+cabecalho = carregar_dados(caminho_arquivo="train.csv")
+dados = carregar_dados(caminho_arquivo="train.csv")
 
 def visualizar_cabecalho():
-  
+  with open ("train.cvs", mode="r")
 
-def visualizar_dados()
+def visualizar_dados():
+  N = int(input("Digite quantos passageiros você quer ver do arquivo")
+          
+  with open () as arq:
+
+    C = 1
+    while C <= N:
+      matriz_dados = csv.reader(arq)
+      
+      C += 1
