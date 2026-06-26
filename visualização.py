@@ -7,6 +7,9 @@ Listar todos os dados de forma organizada.
 
 from importação import carregar_dados
 
-def visualizar_cabecalho()
+cabecalho = carregar_dados
+
+def visualizar_cabecalho():
+  
 
 def visualizar_dados()
