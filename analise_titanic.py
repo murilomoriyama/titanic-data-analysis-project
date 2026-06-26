@@ -1,4 +1,4 @@
-from importação import contagem_geral
+from importação import carregar_dados
 
 carregar_dados()
 def contagem_geral():
