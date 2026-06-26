@@ -1,19 +1,17 @@
-# Yan - Puxar de importação para fazer a analise
 '''
 Exibir o cabeçalho com os nomes das colunas (ex: Name, Age, Survived).
 Permitir visualizar os primeiros N passageiros (ex: as 5 primeiras linhas).
-Listar todos os dados de forma organizada.
+Listar todos os dados de forma organizada. FEITO
 '''
 
-from importação import carregar_dados
+def visualizar_cabecalho(cabecalho):
+    print(cabecalho)
 
-cabecalho, dados = carregar_dados()
+def visualizar_conteudo(dados):
+    N = int(input("Insira quantos passageiros quer ver: "))
 
-def visualizar_cabecalho():
-  print(cabecalho)
+    if N > len(dados):
+        N = len(dados)
 
-def visualizar_dados():
-  N = int(input("Digite quantos passageiros você quer ver do arquivo")
-
-    for i in range(N):
-          print(dados[i])
+    for i in range (N):
+        print(dados[i])
