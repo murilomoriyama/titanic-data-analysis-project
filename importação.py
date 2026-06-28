@@ -7,7 +7,7 @@ def carregar_dados(caminho_arquivo = "train.csv"):
     print("Arquivo não encontrado.")
     return None, None
   try:
-    with open("train.csv", "r") as f:
+    with open("train.csv", "r", encoding = "utf-8") as f:
       conteudo = csv.reader(f)
 
       cabeçalho = [next(conteudo)]
