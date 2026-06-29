@@ -1,10 +1,34 @@
 # 1.  Contagem Geral: Retornar o total de passageiros listados.
 def contagem_geral(dados):
+"""
+    Exibe o total de passageiros presentes no conjunto de dados.
+
+    Percorre a lista de dados e informa a quantidade total de
+    passageiros registrados no arquivo CSV.
+
+    Parâmetros:
+    - dados (list): Lista de listas contendo os dados dos passageiros.
+
+    Retorno:
+    - None: Exibe na tela o total de passageiros.
+"""
     print(f"O total de passageiros no titanic eram de: {len(dados)} pessoas.")
 
 #2.  Estatísticas de Idade e Tarifa: Calcular a idade mínima, 
 # máxima e média dos passageiros, assim como os valores das passagens (Fare).
 def estatisticas(dados):
+    """
+    Calcula estatísticas básicas de idade e tarifa dos passageiros.
+
+    Determina a idade mínima, máxima e média dos passageiros,
+    além da tarifa mínima, máxima e média paga pelas passagens.
+
+    Parâmetros:
+    - dados (list): Lista de listas contendo os dados dos passageiros.
+
+    Retorno:
+    - None: Exibe na tela as estatísticas calculadas de idade e tarifa.
+    """
     qtdpassageiros = len(dados)
 
     somaidade = 0
@@ -52,6 +76,19 @@ def estatisticas(dados):
 #como a classe do passageiro (Pclass) ou o porto de embarque (Embarked).
 
 def frequencia(dados):
+    """
+    Calcula a frequência de categorias presentes no conjunto de dados.
+
+    Permite ao usuário escolher entre visualizar a quantidade de
+    passageiros por classe (Pclass) ou por porto de embarque
+    (Embarked).
+
+    Parâmetros:
+    - dados (list): Lista de listas contendo os dados dos passageiros.
+
+    Retorno:
+    - None: Exibe na tela a frequência da categoria selecionada.
+    """
     primeira_classe = 0
     segunda_classe = 0
     terceira_classe = 0
@@ -99,6 +136,20 @@ def frequencia(dados):
 #Por Classe: Calcular qual a porcentagem de sobreviventes em cada Pclass (1ª, 2ª e 3ª classe).
 
 def sobrevivencia_geral_segmento (dados):
+    """
+    Calcula a taxa de sobrevivência dos passageiros do Titanic.
+
+    Permite visualizar a taxa geral de sobrevivência, a taxa por
+    sexo ou a taxa por classe, apresentando os percentuais
+    correspondentes conforme a opção escolhida pelo usuário.
+
+    Parâmetros:
+    - dados (list): Lista de listas contendo os dados dos passageiros.
+
+    Retorno:
+    - None: Exibe na tela as estatísticas de sobrevivência
+      correspondentes à opção selecionada.
+    """
     geral = 0
     muie = 0
     homi = 0
@@ -240,6 +291,21 @@ def composicao_familiar(dados):
 #Identificar qual porto teve a passagem mais cara e a mais barata.
 
 def tarifa_por_porto(dados):
+    """
+    Analisa as tarifas dos passageiros de acordo com o porto de embarque.
+
+    Calcula a tarifa média paga pelos passageiros que embarcaram
+    em Cherbourg (C), Queenstown (Q) e Southampton (S), além de
+    identificar a maior e a menor tarifa registradas e seus
+    respectivos portos.
+
+    Parâmetros:
+    - dados (list): Lista de listas contendo os dados dos passageiros.
+
+    Retorno:
+    - None: Exibe na tela as médias das tarifas por porto e as
+      tarifas mínima e máxima encontradas.
+    """
     cherbourg = 0
     queenstown = 0
     southampton = 0
@@ -334,6 +400,19 @@ def detalhamento_dados_faltantes(dados):
 #Isso permite observar se passageiros da 1ª classe eram, em média, mais velhos que os da 3ª classe.
 
 def idade_por_classe(dados):
+    """
+    Calcula estatísticas de idade para cada classe do Titanic.
+
+    Determina a idade média, mínima e máxima dos passageiros das
+    três classes (1ª, 2ª e 3ª), permitindo comparar o perfil
+    etário entre elas.
+
+    Parâmetros:
+    - dados (list): Lista de listas contendo os dados dos passageiros.
+
+    Retorno:
+    - None: Exibe na tela as estatísticas de idade para cada classe.
+    """
     primeira_classe = 0
     segunda_classe = 0
     terceira_classe = 0
