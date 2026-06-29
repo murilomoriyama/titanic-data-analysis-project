@@ -21,17 +21,20 @@ while True:
     if opcao == 0:
         visualizar_cabecalho(cabecalho)
         visualizar_conteudo(dados)
-    if opcao == 1:
+    elif opcao == 1:
         contagem_geral(dados)
-    if opcao == 2:    
+    elif opcao == 2:    
         estatisticas(dados)
-    if opcao == 3:
+    elif opcao == 3:
         frequencia(dados)
-    if opcao == 4:
+    elif opcao == 4:
         sobrevivencia_geral_segmento(dados)
-    if opcao == 6:
+    elif opcao == 6:
         tarifa_por_porto(dados)
-    if opcao == 8:
+    elif opcao == 8:
         idade_por_classe(dados)
-    if opcao == 9:
+    elif opcao == 9:
+        print("Programa finalizado com sucesso.")
         break
+    else:
+        print("Opção inválida. Insira uma opção listada!")
