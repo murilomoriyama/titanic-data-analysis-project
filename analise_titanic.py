@@ -195,6 +195,46 @@ def sobrevivencia_geral_segmento (dados):
         print(f"a porcentagem de sobreviventes da segunda classe foi de: {S_segunda:.2f}%")
         print(f"a porcentagem de sobreviventes da terceira classe foi de: {S_terceira:.2f}%")
 
+# 5 Composição familiar: Utilizando as colunas SibSp (irmãos/cônjuges) e Parch (pais/filhos) para gerar novas métricas:
+# Tamanho da Família: Uma análise que soma essas duas colunas para identificar se o passageiro viajava sozinho ou em grupo.
+# Média de Familiares: Calculando a média de parentes que os passageiros tinham a bordo.
+
+def composicao_familiar(dados):
+    """
+    Analisa a composição familiar dos passageiros do Titanic.
+
+    Para cada passageiro, soma as colunas SibSp (irmãos/cônjuges)
+    e Parch (pais/filhos) para identificar se viajava sozinho
+    ou acompanhado. Ao final, calcula a média de familiares
+    presentes a bordo por passageiro.
+
+    Parâmetros:
+    - dados (list): Lista de listas contendo os dados dos passageiros.
+
+    Retorno:
+    - None: Exibe na tela a situação de cada passageiro e a média
+      de familiares a bordo.
+    """
+
+    contador = 0
+
+    for i in range(len(dados)):
+        sibsp = int(dados[i][6])
+        parch = int(dados[i][7])
+
+        total = sibsp + parch
+        contador += total
+
+        if total == 0:
+            print(f"Passageiro {i + 1}: Sozinho")
+        else:
+            print(f"Passageiro {i + 1}: Acompanhado de {total} familiar(es)")
+
+    media = contador / len(dados)
+
+    print()
+    print(f"Média de familiares a bordo por passageiro: {media:.2f}")
+
 #6. Estatísticas de Tarifas (Fare) por Porto de Embarque Cruzando as colunas Fare e Embarked, o sistema pode informar:
 #A tarifa média paga por passageiros que embarcaram em cada porto: C (Cherbourg), Q (Queenstown) e S (Southampton).
 #Identificar qual porto teve a passagem mais cara e a mais barata.
@@ -253,6 +293,42 @@ def tarifa_por_porto(dados):
     print(f"a tarifa mais barata foi no valor de: U${tarifamin:.2f} no porto {portomin}")
     print(f"a tarifa mais cara foi no valor de: U${tarifamax:.2f} no porto {portomax}")
 
+# 7. Detalhamento de Dados Faltantes (Data Cleaning):
+# Contabilizando quantos registros de Age estão vazios (células sem valor no CSV).
+# Identificando a porcentagem de passageiros sem informação de Cabin (cabine), o que é comum em registros da 3ª classe.
+
+def detalhamento_dados_faltantes(dados):
+    """
+    Analisa a quantidade de dados faltantes no conjunto de dados do Titanic.
+
+    Contabiliza quantos passageiros não possuem idade registrada
+    (Age) e calcula a porcentagem de passageiros que não possuem
+    informação da cabine (Cabin).
+
+    Parâmetros:
+    - dados (list): Lista de listas contendo os dados dos passageiros.
+
+    Retorno:
+    - None: Exibe na tela a quantidade de idades ausentes e a
+      porcentagem de passageiros sem informação de cabine.
+    """
+
+    idade_vazia = 0
+    cabine_vazia = 0
+
+    for i in range(len(dados)):
+
+        if dados[i][5].strip() == "":
+            idade_vazia += 1
+
+        if dados[i][10].strip() == "":
+            cabine_vazia += 1
+
+    porcentagem_cabine = (cabine_vazia / len(dados)) * 100
+
+    print(f"Passageiros sem idade informada: {idade_vazia}")
+    print(f"Passageiros sem cabine informada: {porcentagem_cabine:.2f}%")
+
 #8. Perfil Etário por Classe Calcular a idade média, mínima e máxima (estatísticas numéricas básicas solicitadas)
 #especificamente para cada uma das classes (Pclass).
 #Isso permite observar se passageiros da 1ª classe eram, em média, mais velhos que os da 3ª classe.
@@ -308,4 +384,3 @@ def idade_por_classe(dados):
     print(f"na primeira classe a media de etaria era de: {media_primeira:.2f}, sendo a idade minima {primeiramin} anos e a maxima {primeiramax} anos")
     print(f"na segunda classe a media etaria era de: {media_segunda:.2f}, sendo a idade minima {segundamin} anos e a maxima {segundamax} anos")
     print(f"na terceira classe a media etaria era de: {media_terceira:.2f}, sendo a idade minima {terceiramin} anos e a maxima {terceiramax} anos")
-# fazendo o 7
