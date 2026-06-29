@@ -1,6 +1,6 @@
 from importacao import carregar_dados
 from visualizacao import visualizar_cabecalho, visualizar_conteudo
-from analise_titanic import contagem_geral, estatisticas, frequencia, sobrevivencia_geral_segmento, idade_por_classe, tarifa_por_porto
+from analise_titanic import contagem_geral, estatisticas, frequencia, sobrevivencia_geral_segmento, composicao_familiar, idade_por_classe, detalhamento_dados_faltantes, tarifa_por_porto
 
 cabecalho, dados = carregar_dados()
 
