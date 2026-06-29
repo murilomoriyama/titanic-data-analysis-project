@@ -10,9 +10,9 @@ print("1.  Contagem Geral")
 print("2.  Estatísticas de Idade e Tarifa")
 print("3.  Frequência de Categorias")
 print("4. Taxa de Sobrevivência Geral e por Segmento")
-print("5. a definir...")
+print("5. Análise de Composição Familiar")
 print("6. Estatísticas de Tarifas por Porto de Embarque")
-print("7. a definir...")
+print("7. Detalhamento de dados faltantes de passageiros (Data Cleaning)")
 print("8. Perfil Etário por Classe")
 print("9. Encerrar programa.")
 
@@ -29,8 +29,12 @@ while True:
         frequencia(dados)
     elif opcao == 4:
         sobrevivencia_geral_segmento(dados)
+    elif opcao == 5:
+        composicao_familiar(dados)
     elif opcao == 6:
         tarifa_por_porto(dados)
+    elif opcao == 7:
+        detalhamento_dados_faltantes(dados) 
     elif opcao == 8:
         idade_por_classe(dados)
     elif opcao == 9:
