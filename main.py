@@ -1,3 +1,7 @@
+"""
+Alunos: GUILHERME DA SILVA DE MENEZES, MURILO EIDY MORIYAMA,
+ARTHUR RAMOS RODRIGUES SILVA, YAN SEVY GARCIA BELANGER
+"""
 
 """
 Programa principal para análise dos dados do Titanic.
